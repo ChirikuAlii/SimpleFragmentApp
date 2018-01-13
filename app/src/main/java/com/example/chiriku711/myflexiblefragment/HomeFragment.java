@@ -40,8 +40,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         if (v.getId() == R.id.btn_category){
 
             CategoryFragment mCategoryFragment = new CategoryFragment();
+
+            //membuat fragment manager
             FragmentManager mFragmentManager = getFragmentManager();
+
+            //memulai transaksi
             FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
+
+            //melakukan transaksi
             mFragmentTransaction.replace(R.id.frame_container , mCategoryFragment,CategoryFragment.class.getSimpleName());
 
             mFragmentTransaction.addToBackStack(null);
